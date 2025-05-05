@@ -38,123 +38,155 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/408857b5-4b76-46cf-9325-6361d8452d39)
 
-```sql
--- Paste your SQL code below for Question 1
 ```
+select date(AppointmentDateTime) as "AppointmentDate",count(AppointmentID) as TotalAppointments
+from Appointments
+group by AppointmentDateTime;
+```
+
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/fd081a84-5ab3-421c-9ab7-1a1aa98be381)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/0608c196-0ba9-44bf-ad6a-920ffbdd8abe)
 
-```sql
--- Paste your SQL code below for Question 2
+```
+select InsuranceCompany,count(*) as "TotalExpiredPatients"
+from Insurance
+group by InsuranceCompany;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/68176128-065a-4bc6-a723-d3144874ee4f)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/1e1249ce-8998-434d-8efc-e66a9cb9fdcd)
 
-```sql
--- Paste your SQL code below for Question 3
+```
+select InsuranceCompany,count(PatientID) as "TotalPatients"
+from Insurance
+group by InsuranceCompany;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/ef9e7175-f8c1-444a-a18b-ecd93bffa209)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-![image](https://github.com/user-attachments/assets/87cf0bda-773e-4686-b0ae-ecadd453c417)
 
-```sql
--- Paste your SQL code below for Question 4
+```
+select sum(income) as total_income
+from employee
+where age>=40;
 ```
 
 **Output:**
 
-![Output4](output.png)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/df859242-7e06-455e-8285-02a73fb3c9e7)
 
-```sql
--- Paste your SQL code below for Question 5
+```
+select sum(inventory) as "total"
+from fruits
+where unit="LB";
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/7935bf5a-0669-450b-abf9-525e6f2f764c)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/eecade6c-2831-4836-8e56-f8e1a555c052)
 
-```sql
--- Paste your SQL code below for Question 6
+```
+select avg(length(email)) as avg_email_length
+from customer
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/c2f7b4e3-b130-4b31-b5bd-09a53f9671b4)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/e27fb201-787d-45e7-8bb4-98bce94022dd)
 
-```sql
--- Paste your SQL code below for Question 7
+```
+select name,max(length(name)) as "length"
+from customer
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/86753f17-6990-4a37-a181-bb5741f25bc5)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/63a19620-7e73-4e97-a663-d8bb6be10153)
 
-```sql
--- Paste your SQL code below for Question 8
+
+```
+select city,sum(income) as "Income"
+from employee
+group by city
+having sum(income)>200000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+0![image](https://github.com/user-attachments/assets/0610adff-115a-4f1c-9268-1aac2de4bed3)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/1a211bc9-62dc-487b-a4ae-6add51ef8e9c)
 
-```sql
--- Paste your SQL code below for Question 9
+```
+select age,max(income) as "MAX(income)"
+from employee
+group by age
+having max(income)>2000000;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/47aff8b1-a325-49fc-8454-9fa4ad0762d1)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/b2e56c29-53b6-4084-be3e-d6bd432dbe45)
 
-```sql
--- Paste your SQL code below for Question 10
+```
+select category_id,min(price) as "Price"
+from products
+group by category_id
+having min(price)<10;
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+![image](https://github.com/user-attachments/assets/e281293d-9e58-43f0-b63d-0eda47df28d2)
+
 
 
 ## RESULT
